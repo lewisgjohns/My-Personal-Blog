@@ -1,10 +1,10 @@
 header {
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  header .container {
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,9 +27,21 @@ header {
   .back-btn:hover {
     background-color: #0056b3;
   }
+
+  body{
+    /* Default light theme styles */
+    /* background-color: #ffffff;
+    color: #333333;
+    height: 100vh; */
+}
+
+.dark-theme{
+    background-color: #333333;
+    color: #ffffff;
+}
   
   footer {
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     padding: 10px 0;
     text-align: center;
   }
