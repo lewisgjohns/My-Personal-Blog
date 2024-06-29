@@ -1,13 +1,18 @@
 header {
     /* background-color: #f8f9fa; */
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Phosphate, Arial, sans-serif;
+    padding: 20px 0;
+    margin-right: 40px;
+    margin-left: 40px;
+    text-align: center;
+    
   }
   
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 20px;
   }
   
   .header-controls {
@@ -28,6 +33,23 @@ header {
     background-color: #0056b3;
   }
 
+  #title{
+    text-decoration: underline;
+  }
+
+  .blog-post{
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #041E42;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+
+
+  
   body{
     /* Default light theme styles */
     /* background-color: #ffffff;
@@ -47,7 +69,7 @@ header {
   }
   
   footer a {
-    color: #007bff;
+    color: #041E42;
     text-decoration: none;
   }
   
