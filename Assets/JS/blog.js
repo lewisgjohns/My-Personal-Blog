@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initial rendering of blog posts
     renderBlogPosts();
+   
   
     // Event listener for theme toggle button
     themeToggleBtn.addEventListener('click', function() {
