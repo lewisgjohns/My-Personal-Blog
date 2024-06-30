@@ -1,34 +1,37 @@
+/* attaches an event listener to the DOMContentLoaded event of the document object */
 document.addEventListener('DOMContentLoaded', function() {
     const blogForm = document.getElementById('blogForm');
 
-       // Check localStorage for existing blog posts
+       /* retrieves stored blog post data from localStorage and assigns it to the variable 'posts' */
     const posts = JSON.parse(localStorage.getItem('blogPost')) || [];
   
+    /* makes submit button functional */
     blogForm.addEventListener('submit', function(event) {
       event.preventDefault();
   
-      // Get form values
+      /* gets form values */
       const username = document.getElementById('username').value;
       const title = document.getElementById('title').value;
       const content = document.getElementById('content').value;
   
-      // Check if any field is empty
+      /* if the field is empty then an alert will tell user to complete the fields */
       if (!username || !title || !content) {
         alert('Please complete all fields.');
         return;
       }
       
-      // Store data in localStorage
+      /* creates 'postData' object */
       const postData = {
         username,
         title,
         content
       };
 
+      /* pushes postData object to the posts array and then stored in localstorage */
       posts.push(postData)
       localStorage.setItem('blogPost', JSON.stringify(posts));
   
-      // Redirect to posts page (for demonstration, redirecting to a new page)
+      /* redirects to blog page */
       window.location.href = 'blog.html';
     });
   });

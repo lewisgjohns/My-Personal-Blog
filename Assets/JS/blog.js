@@ -1,11 +1,14 @@
+/* used to execute JavaScript code only after the HTML document has been completely loaded */
 document.addEventListener('DOMContentLoaded', function() {
+    
+  /* captures 'themeToggleBtn' and 'blogList' from HTML and assigns them to variables for later use */ 
     const themeToggleBtn = document.getElementById('toggleThemeBtn');
     const blogList = document.getElementById('blogList');
   
-    // Check localStorage for existing blog posts
+    /* retrieves data from the local storage under the key 'blogPost', parses it as JSON, and assigns it to the variable 'posts' */
     const posts = JSON.parse(localStorage.getItem('blogPost')) || [];
   
-    // Function to render blog posts
+    /* Function to render blog posts */
     function renderBlogPosts() {
       blogList.innerHTML = '';
       posts.forEach(post => {
@@ -20,21 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   
-    
-    // Initial rendering of blog posts
+   /* calls out the renderBlogPosts function */
     renderBlogPosts();
    
   
-    // Event listener for theme toggle button
+    /* functionality of 'DARK/LIGHT toggle button using event */
     themeToggleBtn.addEventListener('click', function() {
        document.body.classList.toggle('dark-theme');
       console.log(document.body.style.backgroundColor)
-      // if(document.body.style.backgroundColor === "rgb(51, 51, 51)"){
-      //   console.log("it is in dark mode")
-      // }else{
-      //   console.log("not workingn")
-      // }
-      // document.body.style.backgroundColor = "#333333"
-
     });
   });
